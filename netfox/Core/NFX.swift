@@ -13,8 +13,10 @@ import UIKit
 #endif
 
 private func podPlistVersion() -> String? {
-    guard let path = Bundle(identifier: "com.kasketis.netfox-iOS")?.infoDictionary?["CFBundleShortVersionString"] as? String else { return nil }
-    return path
+    // retrive bundle multiple times causes crash
+    return nil
+    //    guard let path = Bundle(identifier: "com.kasketis.netfox-iOS")?.infoDictionary?["CFBundleShortVersionString"] as? String else { return nil }
+    //    return path
 }
 
 // TODO: Carthage support
